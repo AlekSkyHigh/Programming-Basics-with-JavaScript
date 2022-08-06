@@ -1,0 +1,13 @@
+function inchesToCentimeters (input) {
+
+    let numberInch = Number(input[0]);
+    let numberCm = Number(numberInch * 2.54);
+
+    console.log(numberCm);
+
+
+
+
+}
+
+inchesToCentimeters(["5"])
