@@ -1,0 +1,11 @@
+function petShop (input) {
+
+    let dogFoodAmount = (input[0]) * 2.50;
+    let catFoodAmount = (input[1]) * 4;
+    let totalPrice = dogFoodAmount + catFoodAmount;
+
+    console.log(totalPrice);
+
+}
+
+petShop(["13", "9"])
