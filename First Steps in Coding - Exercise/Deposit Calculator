@@ -1,0 +1,20 @@
+function depositCalculator (input) {
+
+    let depsitAmount = Number(input[0]);
+    let depositTermInMonths = Number(input[1]);
+    let annualInterestRate = Number(input[2]);
+
+    let interest = depsitAmount * annualInterestRate / 100;
+    let interestPerMonth = interest / 12 ;
+
+    let totalAmonut = depsitAmount + depositTermInMonths * interestPerMonth;
+
+    console.log(totalAmonut);
+
+}
+
+depositCalculator(["200 ",
+
+"3 ",
+
+"5.7 "])
