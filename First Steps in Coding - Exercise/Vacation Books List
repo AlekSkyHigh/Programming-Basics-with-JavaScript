@@ -1,0 +1,19 @@
+function vacationBooksList (input) {
+
+    let pagesCurrentBook = Number(input[0]);
+    let pagesReadPerHour = Number(input[1]);
+    let daysToRead = Number(input[2]);
+
+    let totalTimeToReadTheBook = pagesCurrentBook / pagesReadPerHour;
+    let timeToReadPerDay = totalTimeToReadTheBook / daysToRead;
+
+    console.log(timeToReadPerDay);
+
+
+}
+
+vacationBooksList(["212 ",
+
+"20 ",
+
+"2 "])
