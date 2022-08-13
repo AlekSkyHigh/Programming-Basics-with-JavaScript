@@ -1,0 +1,17 @@
+function suppliesForSchool (input) {
+
+    let penPacketges = Number(input[0]);
+    let markerPacketges = Number(input[1]);
+    let boardCleaner = Number(input[2]);
+    let discountPercent = Number(input[3]);
+
+    let priceOfPenPacks = penPacketges * 5.80;
+    let priceOfMarkersPacks = markerPacketges * 7.20;
+    let priceOfBoardCleaner = boardCleaner * 1.20;
+    let priceOfAllMaterials = priceOfPenPacks + priceOfMarkersPacks + priceOfBoardCleaner;
+    let totalPriceWithDiscount = priceOfAllMaterials * 0.75
+
+    console.log(totalPriceWithDiscount);
+
+}
+suppliesForSchool(["2 ", "3 ", "4 ", "25 "])
