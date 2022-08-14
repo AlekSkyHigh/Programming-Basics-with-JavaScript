@@ -1,0 +1,29 @@
+function repainting (input) {
+
+    let naylonNeeded = Number(input[0]);
+    let paintNeeded = Number(input[1]);
+    let paintThinner = Number(input[2]);
+    let workingHours = Number(input[3]);
+
+    let priceOfNaylon = (naylonNeeded + 2) * 1.50;
+    let priceOfPaint = (paintNeeded + paintNeeded * 0.10) * 14.50;
+    let priceOfPaintThinner = paintThinner * 5;
+    let priceOfBags = 0.40;
+
+    let totalAmonutForMaterials = priceOfNaylon + priceOfPaint + priceOfPaintThinner + priceOfBags;
+
+    let totalAmonutForWorkers = (totalAmonutForMaterials * 30 / 100) * workingHours;
+
+    let totalAmonut = totalAmonutForMaterials + totalAmonutForWorkers;
+
+    console.log(totalAmonut);
+
+}
+
+repainting(["10 ",
+
+"11 ",
+
+"4 ",
+
+"8 "])
