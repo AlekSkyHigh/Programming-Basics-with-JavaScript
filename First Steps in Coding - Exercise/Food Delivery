@@ -1,0 +1,26 @@
+function foodDelivery (input) {
+
+    let chikenMenus = Number(input[0]);
+    let fishMenus = Number(input[1]);
+    let vegeMenus = Number(input[2]);
+
+    let priceOfChickenMenus = chikenMenus * 10.35;
+    let priceofFishMenus = fishMenus * 12.40;
+    let priceOfVegeMenus = vegeMenus * 8.15;
+
+    let totalPriceOfMenus = priceOfChickenMenus + priceofFishMenus + priceOfVegeMenus;
+    
+    let dessert = totalPriceOfMenus * 20 / 100;
+    let foodDelivery = 2.50;
+
+    let totalPriceOfOrder = totalPriceOfMenus + dessert + foodDelivery;
+
+    console.log(totalPriceOfOrder);
+
+}
+
+foodDelivery(["2 ",
+
+"4 ",
+
+"3 "])
