@@ -1,0 +1,16 @@
+function fishTank (input) {
+
+    let LengthCm = Number(input[0]);
+    let widthCm = Number(input[1]);
+    let heightCm = Number(input[2]);
+    let percent = Number(input[3]);
+
+    let volume = LengthCm * widthCm * heightCm;
+    let volumeLiters = volume / 1000;
+    let filledSpace = percent / 100;
+    let littersNeeded = volumeLiters * (1 - filledSpace);
+
+    console.log(littersNeeded)
+
+}
+fishTank(["85", "75", "47", "17"])
