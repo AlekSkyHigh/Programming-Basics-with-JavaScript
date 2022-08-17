@@ -1,27 +1,33 @@
-function fishland (input) {
+function fishland(input) {
 
     let skumriqPriceKg = Number(input[0]);
     let cacaPriceKg = Number(input[1]);
-    
+
     let palamudAmountKg = Number(input[2]);
     let safridAmountKg = Number(input[3]);
     let midiAmountKg = Number(input[4]);
 
     let palamudPriceKg = skumriqPriceKg + skumriqPriceKg * 0.60
-    let sumPalamud = (palamudAmountKg * palamudPriceKg).toFixed(2);
+    let sumPalamud = palamudAmountKg * palamudPriceKg;
 
     let safridPriceKg = cacaPriceKg + cacaPriceKg * 0.80
-    let sumSafrid = (safridAmountKg * safridPriceKg).toFixed(2);
-    
-    let sumMidi = (midiAmountKg * 7.50).toFixed(2);
+    let sumSafrid = safridAmountKg * safridPriceKg;
 
-    let smetka = (sumPalamud + sumSafrid + sumMidi)
+    let sumMidi = midiAmountKg * 7.50;
 
-    console.log(smetka)
+    let totalBill = sumPalamud + sumSafrid + sumMidi
 
-    
+    console.log(totalBill.toFixed(2))
+
 }
-fishland([6.90 , 4.20 , 1.5 , 2.5 , 1])
+fishland([
+    6.90, // цена на скумрията на килограм
+    4.20, // цена на цацата на килограм
+    1.5,  // килограма паламуд
+    2.5,  // килограма сафрид
+    1     // килограма миди
+])
+
 //fishland([5.55 , 3.57 , 4.3 , 3.6 , 7])
 //fishland([7.79 ,  5.35 , 9.3 ,  0 , 0])
 
