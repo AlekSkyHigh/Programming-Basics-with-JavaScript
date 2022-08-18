@@ -1,0 +1,14 @@
+function vegetableMarket (input) {
+
+    let n = Number(input[0]);
+    let m = Number(input[1]);
+
+    let totalN = Number(input[2]);
+    let totalM = Number(input[3]);
+
+    let totalIncome = n * totalN + m * totalM
+
+    console.log((totalIncome / 1.94).toFixed(2))
+}
+vegetableMarket([0.194 , 19.4 , 10 , 10])
+vegetableMarket([1.5 , 2.5 , 10 , 10])
