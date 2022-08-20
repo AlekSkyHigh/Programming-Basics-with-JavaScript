@@ -1,0 +1,35 @@
+function housePainting(input) {
+
+    let x = input[0];
+    let y = input[1];
+    let h = input[2];
+
+    let sideWallArea = x * y;
+    let windowArea = 1.5 * 1.5
+    let twoSideWallsArea = sideWallArea * 2 - windowArea * 2;
+
+    let backWallArea = x * x; let entrance = 1.2 * 2;
+    let backAndFrontWallArea = 2 * backWallArea - entrance;
+
+    let totalArea = twoSideWallsArea + backAndFrontWallArea;
+    let greenPaintNeeded = totalArea / 3.4;
+    console.log(greenPaintNeeded.toFixed(2));
+
+    let roofSides = 2 * (x * y);
+    let roofFrontAndBack = 2 * (x * h / 2)
+    let totalRoofArea = roofSides + roofFrontAndBack;
+    let redPaintNeeded = totalRoofArea / 4.3
+    console.log(redPaintNeeded.toFixed(2));
+
+}
+// housePainting([
+     6,  // височината на къщата 
+     10, // дължината на страничната стена 
+     5.2 // височината на триъгълната стена на прокрива 
+])
+
+housePainting([
+10.25,
+15.45,
+8.88
+])
