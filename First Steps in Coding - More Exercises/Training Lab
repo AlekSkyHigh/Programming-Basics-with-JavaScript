@@ -1,0 +1,19 @@
+function trainingLab (input) {
+
+    let lenght = Number(input[0]);   /// дължина в метри
+    let width = Number(input[1]);  ///широчина в метри
+
+    let lenghtCm = lenght * 100
+    let widthCm = width * 100
+
+    let coloumns = Math.trunc((widthCm - 100) / 70)
+
+    let rows = Math.trunc(lenghtCm / 120)
+
+    let result = Math.trunc((coloumns * rows) - 3);
+
+    console.log(result)
+    
+}
+trainingLab([15 , 8.9])
+trainingLab([8.4 , 5.2])
