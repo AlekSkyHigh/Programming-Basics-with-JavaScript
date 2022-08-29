@@ -1,0 +1,27 @@
+function bonusScore(input) {
+
+    let initialScore = Number(input[0]);
+    let bonusScore = 0;
+
+    if (initialScore <= 100) {
+        bonusScore = 5
+    } else if (initialScore > 1000) {
+        bonusScore = initialScore * 0.10
+    } else {
+        bonusScore = initialScore * 0.20
+    }
+
+    if (initialScore % 2 === 0) {
+        bonusScore = bonusScore + 1;
+    } else if (initialScore % 10 === 5) {
+        bonusScore = bonusScore + 2;
+    }
+
+    let totalScore = initialScore + bonusScore;
+    console.log(bonusScore)
+    console.log(totalScore)
+}
+//bonusScore(["20"])
+//bonusScore(["175"])
+//bonusScore(["2703"])
+bonusScore(["15875"])
