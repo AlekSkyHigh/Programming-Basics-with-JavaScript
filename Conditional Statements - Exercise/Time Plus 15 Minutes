@@ -1,0 +1,26 @@
+function timePlus15Minutes(input) {
+
+    let hours = Number(input[0]);
+    let minutes = Number(input[1]);
+
+    let timePlus15Minutes = hours * 60 + minutes + 15;
+
+    let timeInHours = Math.floor(timePlus15Minutes / 60);
+    let timeInMinutes = timePlus15Minutes % 60;
+
+    if (timeInHours > 23) {
+        timeInHours = 0;
+    }
+
+    if (timeInMinutes < 10) {
+        console.log(`${timeInHours}:0${timeInMinutes}`);
+    } else {
+        console.log(`${timeInHours}:${timeInMinutes}`);
+    }
+
+}
+//timePlus15Minutes(["1", "46"])
+//timePlus15Minutes(["0", "01"])
+//timePlus15Minutes(["23", "59"])
+//timePlus15Minutes(["11", "08"])
+timePlus15Minutes(["12", "49"])
