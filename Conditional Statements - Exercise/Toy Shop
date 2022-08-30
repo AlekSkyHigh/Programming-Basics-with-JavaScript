@@ -1,0 +1,27 @@
+function toyShop (input) {
+
+    let priceOfTrip = Number(input[0]);
+    let puzzlesAmount = Number(input[1]);
+    let dollsAmount = Number(input[2]);
+    let bearsAmount = Number(input[3]);
+    let minionsAmount = Number(input[4]);
+    let trucksAmount = Number(input[5]);
+
+    let totalPriceOrder = puzzlesAmount * 2.60 + dollsAmount * 3 + bearsAmount * 4.10 + minionsAmount * 8.20 + trucksAmount * 2;
+    let totalToysOrdered = puzzlesAmount + dollsAmount + bearsAmount + minionsAmount + trucksAmount;
+
+    if (totalToysOrdered >= 50) {
+        totalPriceOrder = totalPriceOrder * 0.75
+    }
+
+    totalPriceOrder = totalPriceOrder * 0.90   //rent
+
+    if (totalPriceOrder >= priceOfTrip) {
+        console.log(`Yes! ${(totalPriceOrder - priceOfTrip).toFixed(2)} lv left.`)
+    } else {
+        console.log(`Not enough money! ${(priceOfTrip - totalPriceOrder).toFixed(2)} lv needed.`)
+    }
+
+}
+toyShop(["40.8", "20", "25", "30", "50", "10"])
+toyShop(["320", "8", "2", "5", "5", "1"])
