@@ -1,0 +1,27 @@
+function shopping (input) {
+
+    let budget = Number(input[0]);
+    let videoCards = Number(input[1]);
+    let processors = Number(input[2]);
+    let ramStorages = Number(input[3]);
+
+    let priceOfVideoCards = videoCards * 250;
+    let pricePerProcessor = priceOfVideoCards * 0.35; 
+    let priceOfProcessors = processors * pricePerProcessor;
+    let pricePerRamStorage = priceOfVideoCards * 0.10; 
+    let priceOfRamStorages = ramStorages * pricePerRamStorage;
+
+    let totalPriceOrder = priceOfVideoCards + priceOfProcessors + priceOfRamStorages;
+
+    if (videoCards > processors) {
+        totalPriceOrder = totalPriceOrder * 0.85
+    }
+
+    if (budget >= totalPriceOrder){
+        console.log(`You have ${(budget - totalPriceOrder).toFixed(2)} leva left!`)
+    } else {
+        console.log(`Not enough money! You need ${(totalPriceOrder - budget).toFixed(2)} leva more!`)
+    }
+}
+shopping(["900", "2", "1", "3"])
+shopping(["920.45", "3", "1", "1"])
