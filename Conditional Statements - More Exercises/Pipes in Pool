@@ -1,0 +1,35 @@
+function pipesInPool(input) {
+
+    let v = Number(input[0]);
+    let p1 = Number(input[1]);
+    let p2 = Number(input[2]);
+    let h = Number(input[3]);
+
+    let pipeOne = p1 * h
+    let pipeTwo = p2 * h
+    let totalPipeLiters = pipeOne + pipeTwo
+    let totalPipeLitersPercent = (totalPipeLiters / v) * 100
+
+    let pipeOnePercent = (pipeOne / totalPipeLiters) * 100
+    let pipeTwoPercent = (pipeTwo / totalPipeLiters) * 100
+
+    if (totalPipeLiters < v) {
+        console.log(`The pool is ${totalPipeLitersPercent.toFixed(2)}% full. Pipe 1: ${pipeOnePercent.toFixed(2)}%. Pipe 2: ${pipeTwoPercent.toFixed(2)}%.`);
+    } else {
+        console.log(`For ${h.toFixed(2)} hours the pool overflows with ${(totalPipeLiters - v).toFixed(2)} liters.`);
+    }
+
+}
+pipesInPool([
+    1200, // Обем на басейна в литри 
+    100,    // дебит на първата тръба за час 
+    120,    // дебит на втората тръба за час
+    3    // часовете които работникът отсъства 
+])
+
+// pipesInPool([
+//     100,
+//     100,
+//     100,
+//     2.5
+// ])
