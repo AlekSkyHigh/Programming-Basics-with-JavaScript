@@ -1,0 +1,25 @@
+function sleepyTomCat(input) {
+
+    let daysOff = Number(input[0])
+
+    let daysOffPlayTimeMin = daysOff * 127
+    let workDaysPlayTimeMin = (365 - daysOff) * 63
+    let tottalPlayTimeMin = daysOffPlayTimeMin + workDaysPlayTimeMin;
+
+    if (tottalPlayTimeMin > 30000) {
+        let timeRest = tottalPlayTimeMin - 30000;
+        let restTimeHours = Math.floor(timeRest / 60)
+        let restTimeMin = timeRest % 60
+        console.log(`Tom will run away`);
+        console.log(`${Math.abs(restTimeHours)} hours and ${Math.abs(restTimeMin)} minutes more for play`);
+    } else {
+        let timeRest = 30000 - tottalPlayTimeMin;
+        let restTimeHours = Math.floor(timeRest / 60)
+        let restTimeMin = timeRest % 60
+        console.log(`Tom sleeps well`);
+        console.log(`${restTimeHours} hours and ${restTimeMin} minutes less for play`);
+    }
+
+}
+sleepyTomCat([20])
+// sleepyTomCat([113])
