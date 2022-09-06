@@ -1,0 +1,42 @@
+function transportPrice(input) {
+
+    let distance = Number(input[0]);
+    let time = input[1];
+
+    let price = 0;
+
+    if (distance <= 19) {
+        price = 0.70;
+        if (time === "day") {
+            price = price + 0.79 * distance;
+        } else {
+            price = price + 0.90 * distance
+        }
+    } else if (distance >= 20 && distance <= 99) {
+        price = 0.09 * distance;
+    } else if (distance >= 100) {
+        price = 0.06 * distance;
+    }
+
+    console.log(price.toFixed(2));
+
+}
+transportPrice([
+    5,      //брой километри 
+    "day"
+])
+
+// transportPrice([
+//     7,
+//     "night"
+// ])
+
+// transportPrice([
+//     25,
+//     "day"
+// ])
+
+// transportPrice([
+//     180,
+//     "night"
+// ])
