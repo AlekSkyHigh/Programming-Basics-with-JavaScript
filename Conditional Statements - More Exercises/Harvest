@@ -1,0 +1,31 @@
+function harvest(input) {
+
+    let x = Number(input[0]);
+    let y = Number(input[1]);
+    let z = Number(input[2]);
+    let workers = Number(input[3]);
+
+    let totalHarvest = x * y;
+    let totalWine = (totalHarvest * 0.40) / 2.5
+
+    if (totalWine < z) {
+        console.log(`It will be a tough winter! More ${Math.floor(z - totalWine)} liters wine needed.`);
+    } else {
+        console.log(`Good harvest this year! Total wine: ${Math.floor(totalWine)} liters.`);
+        console.log(`${Math.ceil(totalWine - z)} liters left -> ${Math.ceil(totalWine - z) / workers} liters per person.`);
+    }
+
+}
+// harvest([
+//     650,    // X кв.м е лозето 
+//     2,      // Y грозде за един кв.м 
+//     175,    // Z нужни литри вино 
+//     3       // брой работници 
+// ])
+
+harvest([
+    1020,
+    1.5,
+    425,
+    4
+])
