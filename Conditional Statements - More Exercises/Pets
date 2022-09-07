@@ -1,0 +1,36 @@
+function pets(input) {
+
+    let days = Number(input[0]);
+    let foodLeftKilograms = Number(input[1]);
+    let dogFoodPerDay = Number(input[2]);
+    let catFoodPerDay = Number(input[3]);
+    let turtuleFoodPerDay = Number(input[4]) / 1000;
+
+    let dogFoodNeeded = days * dogFoodPerDay;
+    let catFoodNeeded = days * catFoodPerDay;
+    let turtleFoodNeeded = days * turtuleFoodPerDay;
+
+    let totalFoodNeeded = dogFoodNeeded + catFoodNeeded + turtleFoodNeeded;
+
+    if (foodLeftKilograms >= totalFoodNeeded) {
+        console.log(`${Math.floor(foodLeftKilograms - totalFoodNeeded)} kilos of food left.`);
+    } else {
+        console.log(`${Math.ceil(totalFoodNeeded - foodLeftKilograms)} more kilos of food are needed.`);
+    }
+
+}
+// pets([
+//     2,      //брой дни 
+//     10,     //оставена храна в килограми 
+//     1,      //храна на ден за кучето в килограми 
+//     1,      //храна на ден за котката в килограми
+//     1200    //храна на ден за костенурката в грамове
+// ])
+
+pets([
+    5,
+    10,
+    2.1,
+    0.8,
+    321,
+])
