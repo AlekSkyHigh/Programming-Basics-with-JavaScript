@@ -1,0 +1,37 @@
+function fuelTank(input) {
+
+    let fuelType = String(input[0]);
+    let litersAvailable = Number(input[1]);
+
+    if (fuelType === "diesel" || fuelType === "gasoline" || fuelType === "gas") {
+
+        if (litersAvailable >= 25) {
+            console.log(`You have enough ${fuelType}.`);
+        } else {
+            console.log(`Fill your tank with ${fuelType}!`);
+        }
+
+    } else {
+        console.log(`Invalid fuel!`);
+    }
+
+}
+fuelTank([
+    "diesel",
+    10
+])
+
+fuelTank([
+    "gasoline",
+    40
+])
+
+fuelTank([
+    "gas",
+    25
+])
+
+fuelTank([
+    "Kerosene",
+    200
+])
