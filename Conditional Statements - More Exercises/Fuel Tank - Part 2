@@ -1,0 +1,55 @@
+function fuelTank2(input) {
+
+    let fuelType = String(input[0]);
+    let fuelAmount = Number(input[1]);
+    let clubCard = String(input[2]);
+
+    let price = 0;
+
+    if (fuelType === "Gasoline") {
+        price = 2.22 * fuelAmount;
+
+        if (clubCard === "Yes") {
+            price = 2.04 * fuelAmount;
+        }
+
+    } else if (fuelType === "Gas") {
+        price = 0.93 * fuelAmount;
+
+        if (clubCard === "Yes") {
+            price = 0.85 * fuelAmount;
+        }
+
+    } else if (fuelType === "Diesel") {
+        price = 2.33 * fuelAmount;
+
+        if (clubCard === "Yes") {
+            price = 2.21 * fuelAmount;
+        }
+    }
+
+    if (fuelAmount >= 20 && fuelAmount <= 25) {
+        price = price * 0.92;
+    } else if (fuelAmount > 25) {
+        price = price * 0.90;
+    }
+
+    console.log(`${price.toFixed(2)} lv.`);
+}
+fuelTank2([
+    "Gas",
+    30,
+    "Yes"
+])
+
+fuelTank2([
+    "Gasoline",
+    25,
+    "No"
+])
+
+fuelTank2([
+    "Diesel",
+    19,
+    "No"
+])
