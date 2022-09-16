@@ -1,0 +1,53 @@
+function tradeCommissions(input) {
+
+    let city = input[0];
+    let sales = Number(input[1]);
+    let commission = 0;
+
+    switch (city) {
+        case "Sofia":
+            if (sales <= 500 || sales === 0) {
+                commission = (sales - sales * 0.95).toFixed(2);
+            } else if (sales > 500 && sales <= 1000) {
+                commission = (sales - sales * 0.93).toFixed(2);
+            } else if (sales > 1000 && sales <= 10000) {
+                commission = (sales - sales * 0.92).toFixed(2);
+            } else if (sales > 10000) {
+                commission = (sales - sales * 0.88).toFixed(2);
+            }
+            ; break
+
+        case "Varna":
+            if (sales <= 500 || sales === 0) {
+                commission = (sales * 4.5 / 100).toFixed(2);
+            } else if (sales > 500 && sales <= 1000) {
+                commission = (sales * 7.5 / 100).toFixed(2);
+            } else if (sales > 1000 && sales <= 10000) {
+                commission = (sales - sales * 0.90).toFixed(2);
+            } else if (sales > 10000) {
+                commission = (sales - sales * 0.87).toFixed(2);
+            }
+            ; break
+
+        case "Plovdiv":
+            if (sales <= 500 || sales === 0) {
+                commission = (sales * 5.5 / 100).toFixed(2);
+            } else if (sales > 500 && sales <= 1000) {
+                commission = (sales - sales * 0.92).toFixed(2);
+            } else if (sales > 1000 && sales <= 10000) {
+                commission = (sales - sales * 0.88).toFixed(2);
+            } else if (sales > 10000) {
+                commission = (sales * 14.5 / 100).toFixed(2);
+            }
+            ; break
+
+        default: console.log("error")
+
+       
+    }
+    console.log(commission)
+}
+// tradeCommissions(["Sofia", "1500"])
+// tradeCommissions(["Plovdiv", "499.99"])
+// tradeCommissions(["Varna", "3874.50"])
+tradeCommissions(["Kaspichan", "-50"])
